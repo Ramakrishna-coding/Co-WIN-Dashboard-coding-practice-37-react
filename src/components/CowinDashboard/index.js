@@ -62,7 +62,7 @@ class CowinDashboard extends Component {
           <VaccinationByGender vaccinationByGender={byGenderList} />
         </div>
         <div className="box">
-          <h1 className="box-heading">Vaccination by age</h1>
+          <h1 className="box-heading">Vaccination by Age</h1>
           <VaccinationByAge vaccinationByAge={byAgeList} />
         </div>
       </>
