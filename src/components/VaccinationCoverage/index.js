@@ -1,7 +1,7 @@
 import {BarChart, Bar, XAxis, YAxis, Legend} from 'recharts'
 
 const VaccinationCoverage = props => {
-  const {last7Days} = props
+  const {lastSevenDays} = props
 
   const DataFormatter = number => {
     if (number > 100) {
@@ -12,7 +12,7 @@ const VaccinationCoverage = props => {
 
   return (
     <BarChart
-      data={last7Days} // -->This value has to be data value modified
+      data={lastSevenDays} // -->This value has to be data value modified
       width={1000}
       height={400}
     >

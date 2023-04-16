@@ -16,7 +16,7 @@ const apiStatusText = {
 class CowinDashboard extends Component {
   state = {
     apiStatus: apiStatusText.initial,
-    last7DaysData: [],
+    lastSevenDaysData: [],
     byGenderList: [],
     byAgeList: [],
   }
@@ -39,7 +39,7 @@ class CowinDashboard extends Component {
         dose2: eachItem.dose_2,
       }))
       this.setState({
-        last7DaysData: fetchedData,
+        lastSevenDaysData: fetchedData,
         byGenderList: data.vaccination_by_gender,
         byAgeList: data.vaccination_by_age,
         apiStatus: apiStatusText.success,
@@ -50,12 +50,12 @@ class CowinDashboard extends Component {
   }
 
   SuccessView = () => {
-    const {last7DaysData, byGenderList, byAgeList} = this.state
+    const {lastSevenDaysData, byGenderList, byAgeList} = this.state
     return (
       <>
         <div className="box">
           <h1 className="box-heading">Vaccination Coverage</h1>
-          <VaccinationCoverage last7Days={last7DaysData} />
+          <VaccinationCoverage lastSevenDays={lastSevenDaysData} />
         </div>
         <div className="box">
           <h1 className="box-heading">Vaccination by gender</h1>
